@@ -1,0 +1,38 @@
+<h1>Welcome to Live-Ticker</h1>
+
+<table border="1px black solid">
+  <thead>
+  <tr>
+    <th>Minute</th>
+    <th>Aktion</th>
+    <th>Beschreibung</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let tickerMessage of tickerMessages">
+    <td>{{tickerMessage.timeInSec | secToMin}}</td>
+    <td>{{tickerMessage.type}}</td>
+    <td>{{tickerMessage.message}}</td>
+  </tr>
+  </tbody>
+</table>
+
+<p>Currently <strong>{{views | async}}</strong> person(s) is/are following the live-ticker.</p>
+
+<h3>Useful links:</h3>
+<ul>
+  <li>
+    <a href="https://angular.io/docs" rel="noopener">Angular Documentation</a>
+  </li>
+  <li>
+    <a href="https://docs.nestjs.com/websockets/gateways" rel="noopener">Nest.js Documentation Websockets</a>
+  </li>
+  <li>
+    <a href="https://socket.io/" rel="noopener">Socket.io</a>
+  </li>
+  <li>
+    <a href="https://github.com/mauricewipf/nestjs-websockets" rel="noopener">Find this project on GitHub</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
