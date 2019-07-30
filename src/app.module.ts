@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
-import { EventsModule } from './events/events.module';
+import { LivetickerModule } from './liveticker/liveticker.module';
 
 @Module({
-  imports: [EventsModule],
+  imports: [LivetickerModule],
 })
 export class ApplicationModule {}
