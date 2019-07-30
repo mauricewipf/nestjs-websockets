@@ -17,4 +17,3 @@ export const mockData: TickerMessage[] = [
         message: 'LA Galaxy mit der Chance zum 2:0',
     },
 ];
-
